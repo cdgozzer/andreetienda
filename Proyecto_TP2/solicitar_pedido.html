@@ -20,7 +20,13 @@
 	<link href="assets/css/style-responsive.min.css" rel="stylesheet" />
 	<link href="assets/css/theme/default.css" rel="stylesheet" id="theme" />
 	<!-- ================== END BASE CSS STYLE ================== -->
-	
+	<style>
+		.pintado{
+			background:#ff5b57;
+
+		}
+	</style>
+
 	<!-- ================== BEGIN BASE JS ================== -->
 	<script src="assets/plugins/pace/pace.min.js"></script>
 	<!-- ================== END BASE JS ================== -->
@@ -195,19 +201,29 @@
 					<div class="panel panel-inverse" data-sortable-id="form-stuff-1">
 						<div class="panel-heading">
 
-							<!--<h4 class="panel-title">N° DE PEDIDO: 000-001</h4>-->
+							<h4 class="panel-title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
 						</div>
 						<div class="panel-body">
+							<div id="enviadocorrectamente" class="alert alert-info fade in m-b-15" style="display: none">
+								<strong>Correcto!</strong>
+								El pedido se a enviado correctamente!
+								<span class="close" data-dismiss="alert">×</span>
+							</div>
+							<!--<div id="enviadocorrectamente" class="callout callout-success" style="display: none">
+                                  <h4>Pedido Enviado!</h4>
+                                  <p>Se a enviado correctamente el pedido.</p>
+                                </div>*/-->
+
 							<form class="form-horizontal">
 								<div class="panel-body"></div>
 								<div class="form-group">
 
 
 									<div class="col-md-2">
-										<label class=" control-label" align="left">Ingresar N° de Pedido:</label>
+										<label class=" control-label" align="left">Ingresar detalle:</label>
 									</div>                                	
 									<div class="col-md-5">
-										<input type="text" class="form-control" placeholder="xxx-xxx" />
+										<input type="text" class="form-control" placeholder="Producto de la Marca X 3 Litros" />
 									</div> 
 									<div class="col-md-5">
 										<button type="button" class="btn btn-success m-r-5 m-b-5" data-toggle="modal" data-target="#myModalBuscar">Mostrar</button>
@@ -217,42 +233,102 @@
 									<table id="data-table" class="table table-striped table-bordered nowrap" width="100%">
 										<thead>
 											<tr>
-												<th style="text-align: center;" WIDTH="40">N° de Pedido</th>
-												<th style="text-align: center;" WIDTH="300">Razón Social / Nombres y Apellidos</th>
-												<th style="text-align: center;" WIDTH="40">Monto Total</th>
+												<th style="text-align: center;" WIDTH="40">Codigo</th>
+												<th style="text-align: center;" WIDTH="300">Detalle</th>
+												<th style="text-align: center;" WIDTH="40">Stock</th>
 											</tr>
 										</thead>
 										<tbody>
-											<tr class="odd gradeX" style="text-align: center;">
+											<tr class="odd gradeX danger" style="text-align: center;">
 												<td style="text-align: center;">000-001</td>
 												<td style="text-align: left;">LA MANTECA S.A.C.</td>
-												<td>230.00</td>
+												<td>4</td>
 											</tr>
-											<tr class="odd gradeX" style="text-align: center;">
+											<tr class="odd gradeX danger" style="text-align: center;">
 												<td style="text-align: center;">000-002</td>
 												<td style="text-align: left;">Mateo</td>
-												<td>20.00</td>
+												<td>5</td>
 											</tr>
-											<tr class="odd gradeX" style="text-align: center;">
+											<tr class="odd gradeX danger" style="text-align: center;">
 												<td style="text-align: center;">000-003</td>
 												<td style="text-align: left;">CERRO VIEJO E.I.R.L.</td>
-												<td>120.00</td>
+												<td>8</td>
 											</tr>
-											<tr class="odd gradeX" style="text-align: center;">
+											<tr class="odd gradeX warning" style="text-align: center;">
 												<td style="text-align: center;">000-004</td>
 												<td style="text-align: left;">MI TIENDITA S.A.C.</td>
-												<td>45.50</td>
+												<td>11</td>
 											</tr>
-											<tr class="odd gradeX" style="text-align: center;">
+											<tr class="odd gradeX warning" style="text-align: center;">
 												<td style="text-align: center;">000-005</td>
 												<td style="text-align: left;">Loren</td>
-												<td>5.50</td>
+												<td>12</td>
 												
-											</tr><tr class="odd gradeX" style="text-align: center;">
+											</tr><tr class="odd gradeX warning" style="text-align: center;">
 												<td style="text-align: center;">000-006</td>
 												<td style="text-align: left;">Emilia</td>
-												<td>5.00</td>
-											</tr>                                    
+												<td>15</td>
+											</tr> 
+											</tr><tr class="odd gradeX success" style="text-align: center;">
+												<td style="text-align: center;">000-006</td>
+												<td style="text-align: left;">Emilia</td>
+												<td>48</td>
+											</tr> 
+											</tr><tr class="odd gradeX success " style="text-align: center;">
+												<td style="text-align: center;">000-006</td>
+												<td style="text-align: left;">Emilia</td>
+												<td>49</td>
+											</tr> 
+											</tr><tr class="odd gradeX success" style="text-align: center;">
+												<td style="text-align: center;">000-006</td>
+												<td style="text-align: left;">Emilia</td>
+												<td>78</td>
+											</tr>
+											</tr><tr class="odd gradeX success" style="text-align: center;">
+												<td style="text-align: center;">000-006</td>
+												<td style="text-align: left;">Emilia</td>
+												<td>48</td>
+											</tr> 
+											</tr><tr class="odd gradeX success" style="text-align: center;">
+												<td style="text-align: center;">000-006</td>
+												<td style="text-align: left;">Emilia</td>
+												<td>49</td>
+											</tr> 
+											</tr><tr class="odd gradeX success" style="text-align: center;">
+												<td style="text-align: center;">000-006</td>
+												<td style="text-align: left;">Emilia</td>
+												<td>78</td>
+											</tr>
+											</tr><tr class="odd gradeX success" style="text-align: center;">
+												<td style="text-align: center;">000-006</td>
+												<td style="text-align: left;">Emilia</td>
+												<td>48</td>
+											</tr> 
+											</tr><tr class="odd gradeX success" style="text-align: center;">
+												<td style="text-align: center;">000-006</td>
+												<td style="text-align: left;">Emilia</td>
+												<td>49</td>
+											</tr> 
+											</tr><tr class="odd gradeX success" style="text-align: center;">
+												<td style="text-align: center;">000-006</td>
+												<td style="text-align: left;">Emilia</td>
+												<td>78</td>
+											</tr> 
+											</tr><tr class="odd gradeX success" style="text-align: center;">
+												<td style="text-align: center;">000-006</td>
+												<td style="text-align: left;">Emilia</td>
+												<td>48</td>
+											</tr> 
+											</tr><tr class="odd gradeX success" style="text-align: center;">
+												<td style="text-align: center;">000-006</td>
+												<td style="text-align: left;">Emilia</td>
+												<td>49</td>
+											</tr> 
+											</tr><tr class="odd gradeX success" style="text-align: center;">
+												<td style="text-align: center;">000-006</td>
+												<td style="text-align: left;">Emilia</td>
+												<td>78</td>
+											</tr>                                      
 										</tbody>
 									</table>
 								</div>								
@@ -279,106 +355,52 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="myModalLabel">Lista de Productos</h4>
-				</div>
-				<div class="modal-body">
-					<div class="table-responsive">                                
-						<table id="data-table" class="table table-striped table-bordered nowrap" width="100%">
-							<thead>
-								<tr>
-									<th style="text-align: center;" WIDTH="80">Código</th>
-									<th style="text-align: center;" WIDTH="600">Detalle</th>
-									<th style="text-align: center;" WIDTH="80">Stock</th>
-									<th style="text-align: center;" WIDTH="100">Prec.Unit.</th>
-									<th style="text-align: center;" WIDTH="80">Cantd.</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr class="odd gradeX" style="text-align: center;">
-									<td>L10254AC</td>
-									<td style="text-align: left;">Leche LAIVE SBELT LIGHT en caja libre de lactosa 1 LITRO</td>
-									<td>25</td>
-									<td>3.80</td>
-									<td><input type="text" class="form-control"/></td>
- 								</tr>
-								<tr class="even gradeC" style="text-align: center;">
-									<td>L10257AB</td>
-									<td style="text-align: left;">Leche LAIVE LIGHT en caja libre de lactosa 1 LITRO</td>
-									<td>37</td>
-									<td>3.20</td>
-									<td><input type="text" class="form-control"/></td>
-								</tr>
-								<tr class="even gradeC" style="text-align: center;">
-									<td>L18247HY</td>
-									<td style="text-align: left;">Leche UHT GLORIA LIGHT en caja libre de lactosa 1 LITRO</td>
-									<td>45</td>
-									<td>4.40</td>
-									<td><input type="text" class="form-control"/></td>
-								</tr>
-								<tr class="even gradeC" style="text-align: center;">
-									<td>L78255NH</td>
-									<td style="text-align: left;">Leche GLORIA LIGHT en caja libre de lactosa 1 LITRO</td>
-									<td>65</td>
-									<td>5.50</td>
-									<td><input type="text" class="form-control"/></td>
-								</tr>
-								<tr class="even gradeC" style="text-align: center;">
-									<td>L45854RT</td>
-									<td style="text-align: left;">Leche GLORIA EXTRA LIGHT en caja libre de lactosa 1 LITRO</td>
-									<td>24</td>
-									<td>4.80</td>
-									<td><input type="text" class="form-control"/></td>
-								</tr>                                     
-							</tbody>
-						</table>
-					</div> 
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-					<button type="button" class="btn btn-success">Agregar</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Modal Generar Factura-->
-	<div class="modal fade" id="myModalGenerarFactura" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog modal-lg" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="myModalLabel">Datos del Cliente</h4>
+					<h4 class="modal-title" id="myModalLabel">Solicitar pedido a Proveedor</h4>
 				</div>
 				<div class="modal-body">
 					<form class="form-horizontal form-bordered" data-parsley-validate="true" name="demo-form">
 								<div class="form-group">
-									<label class="control-label col-md-4 col-sm-4" for="fullname">Razón Social / Nombres y Apellidos * :</label>
+									<label class="control-label col-md-4 col-sm-4" for="fullname">Proveedor * :</label>
 									<div class="col-md-6 col-sm-6">
-										<input class="form-control" type="text" id="fullname" name="fullname" data-parsley-required="true" />
+										<select class="form-control">
+											<option>Proveedor Don Pepito</option>
+											<option>Proveedor Don Felipe S.A</option>
+											<option>Proveedor Don Ramon</option>
+											<option>Proveedor Doña Negrita</option>
+											<option>Proveedor Don Rafael</option>
+											<option>Proveedor San Pedro</option>
+											<option>Proveedor San Pancho E.R.L</option>
+											<option>Proveedor Don Arias</option>
+											<option>Proveedor Avicor</option>
+
+
+										</select>
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="control-label col-md-4 col-sm-4" for="email">N° de RUC * :</label>
+									<label class="control-label col-md-4 col-sm-4" for="email">Cantidad * :</label>
 									<div class="col-md-6 col-sm-6">
 										<input class="form-control" type="text" id="email" name="email" placeholder "xxxxxxxxxxx" data-parsley-type="email" data-parsley-required="true" />
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="control-label col-md-4 col-sm-4" for="website">Dirección * :</label>
+									<label class="control-label col-md-4 col-sm-4" for="website">Fecha Limite* :</label>
 									<div class="col-md-6 col-sm-6">
 										<input class="form-control" type="url" id="website" name="website" data-parsley-type="url"/>
 									</div>
-								</div>
-								
-                            </form>
+								</div>								
+                    </form>
+					
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Limpiar</button>
-					<button type="button" class="btn btn-inverse">Imprimir Factura</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+					<button id="btn_enviar_a_proveedor" type="button" class="btn btn-success">Enviar</button>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	
 
 
 	<!-- ================== BEGIN BASE JS ================== -->
@@ -401,8 +423,27 @@
 	
 	<script>
 		$(document).ready(function() {
-		App.init();
-	});
+			App.init();
+
+			
+
+			$("#data-table tbody>tr").dblclick(function(e){			
+				$("#myModalBuscar").modal('show');
+			});
+			
+
+			$("#btn_enviar_a_proveedor").click(function(){
+				$("#myModalBuscar").modal('hide');
+          		$("#enviadocorrectamente").fadeIn();
+		          setTimeout(function(){
+		            $("#enviadocorrectamente").fadeOut();
+		          }, 3000);
+
+			});
+
+		});
+
+		
 </script>
 </body>
 </html>
